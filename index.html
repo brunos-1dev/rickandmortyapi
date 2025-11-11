@@ -17,16 +17,28 @@
       <div class="buttons">
         <button id="allBtn">Personajes</button>
         <button id="filterBtn">Buscar</button>
+        <button id="clearBtn">Limpiar</button>
       </div>
       <img src="https://rickandmortyapi.com/api/character/avatar/2.jpeg" alt="Morty">
     </section>
 
     <section id="filters">
       <input type="text" id="name" placeholder="Nombre">
-      <input type="text" id="status" placeholder="Estado (alive, dead, unknown)">
+      <select id="status">
+        <option value="">Estado</option>
+        <option value="alive">Alive</option>
+        <option value="dead">Dead</option>
+        <option value="unknown">Unknown</option>
+      </select>
       <input type="text" id="species" placeholder="Especie">
       <input type="text" id="type" placeholder="Tipo">
-      <input type="text" id="gender" placeholder="Género (male, female, genderless, unknown)">
+      <select id="gender">
+        <option value="">Género</option>
+        <option value="female">Female</option>
+        <option value="male">Male</option>
+        <option value="genderless">Genderless</option>
+        <option value="unknown">Unknown</option>
+      </select>
     </section>
 
     <section id="output"></section>

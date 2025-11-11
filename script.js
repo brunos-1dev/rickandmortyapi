@@ -2,6 +2,7 @@ const BASE_URL = "https://rickandmortyapi.com/api/character";
 const output = document.getElementById("output");
 const allBtn = document.getElementById("allBtn");
 const filterBtn = document.getElementById("filterBtn");
+const clearBtn = document.getElementById("clearBtn");
 
 function renderCharacters(characters) {
   output.innerHTML = "";
@@ -71,5 +72,15 @@ async function getFilteredCharacters() {
   }
 }
 
+function clearFilters() {
+  document.getElementById("name").value = "";
+  document.getElementById("status").value = "";
+  document.getElementById("species").value = "";
+  document.getElementById("type").value = "";
+  document.getElementById("gender").value = "";
+  output.innerHTML = "";
+}
+
 allBtn.addEventListener("click", getAllCharacters);
 filterBtn.addEventListener("click", getFilteredCharacters);
+clearBtn.addEventListener("click", clearFilters);
